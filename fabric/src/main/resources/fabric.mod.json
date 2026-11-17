@@ -1,0 +1,44 @@
+{
+    "schemaVersion": 1,
+    "id": "examplemod",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "sources": "https://github.com/murphy_slaw/examplemod"
+    },
+    "license": "${license}",
+    "icon": "assets/examplemod.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            {
+                "value": "net.funkpla.examplemod.ExampleMod",
+                "adapter": "kotlin"
+
+            }
+        ],
+        "client": [
+            {
+                "value": "net.funkpla.examplemod.ExampleModClient",
+                "adapter": "kotlin"
+            }
+        ]
+    },
+    "mixins": [
+        "examplemod.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=17"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  
